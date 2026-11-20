@@ -1,0 +1,90 @@
+{
+    "project_title": "Bank Term Deposit Subscription Classification",
+    "task_type": "classification",
+    "target_column": "deposit_subscribed",
+    "best_model_name": "LogisticRegression",
+    "numeric_features": [
+        "age",
+        "balance",
+        "duration",
+        "campaign"
+    ],
+    "categorical_features": [
+        "job",
+        "marital",
+        "education",
+        "housing",
+        "loan",
+        "contact",
+        "poutcome"
+    ],
+    "feature_ranges": {
+        "age": {
+            "min": 20,
+            "max": 75,
+            "default": 46,
+            "dtype": "int"
+        },
+        "balance": {
+            "min": -500,
+            "max": 18000,
+            "default": 9080,
+            "dtype": "int"
+        },
+        "duration": {
+            "min": 30,
+            "max": 1200,
+            "default": 614,
+            "dtype": "int"
+        },
+        "campaign": {
+            "min": 1,
+            "max": 10,
+            "default": 6,
+            "dtype": "int"
+        }
+    },
+    "categorical_options": {
+        "job": [
+            "admin.",
+            "technician",
+            "services",
+            "management",
+            "retired",
+            "blue-collar",
+            "entrepreneur"
+        ],
+        "marital": [
+            "married",
+            "single",
+            "divorced"
+        ],
+        "education": [
+            "secondary",
+            "tertiary",
+            "primary"
+        ],
+        "housing": [
+            "yes",
+            "no"
+        ],
+        "loan": [
+            "yes",
+            "no"
+        ],
+        "contact": [
+            "cellular",
+            "telephone"
+        ],
+        "poutcome": [
+            "unknown",
+            "failure",
+            "success"
+        ]
+    },
+    "metrics": {
+        "accuracy": 0.9667,
+        "f1_score": 0.9474,
+        "roc_auc": 0.9887
+    }
+}
